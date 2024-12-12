@@ -1,5 +1,20 @@
 {
     "files.associations": {
-        "print.h": "c"
+        "print.h": "c",
+        "cmath": "c",
+        "*.tcc": "c",
+        "cstdlib": "c",
+        "stddef.h": "c",
+        "stdint.h": "c",
+        "types.h": "c",
+        "io.h": "c",
+        "stdbool.h": "c",
+        "math.h": "c",
+        "unistd.h": "c",
+        "heap.h": "c",
+        "lib.h": "c",
+        "print_buffer.h": "c",
+        "stdlib.h": "c",
+        "*.hlp": "cpp"
     }
 }

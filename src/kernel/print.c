@@ -1,7 +1,7 @@
 #include "print.h"
 
-const static size_t NUM_COLS = 80;
-const static size_t NUM_ROWS = 25;
+static const size_t NUM_COLS = 80;
+static const size_t NUM_ROWS = 25;
 
 struct Char {
     u8 character;
@@ -15,8 +15,8 @@ u8 color = PRINT_COLOR_WHITE | PRINT_COLOR_BLACK << 4;
 
 void clear_row(size_t row) {
     struct Char empty = (struct Char) {
-        character: ' ',
-        color: color,
+        .character = ' ',
+        .color = color,
     };
 
     for (size_t col = 0; col < NUM_COLS; col++) {
@@ -59,8 +59,8 @@ void print_char(char character) {
     }
 
     buffer[col + NUM_COLS * row] = (struct Char) {
-        character: (u8) character,
-        color: color,
+        .character = (u8) character,
+        .color = color,
     };
 
     col++;
@@ -80,4 +80,16 @@ void print_str(const char* str) {
 
 void print_set_color(u8 foreground, u8 background) {
     color = foreground + (background << 4);
+}
+
+void print_err(const char *msg)
+{
+    u8 old_color = color;
+
+    /* color for red */
+    print_set_color(PRINT_COLOR_RED, PRINT_COLOR_BLACK);
+    print_str("err: ");
+    color = old_color;
+    print_str(msg);
+    print_char('\n');
 }

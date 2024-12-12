@@ -26,6 +26,8 @@ enum {
 void print_clear();
 void print_char(char character);
 void print_str(const char* string);
+void print_err(const char* msg);
 void print_set_color(u8 foreground, u8 background);
+/*TODO: move strlen to lib*/
 
 #endif // __PRINT_h__

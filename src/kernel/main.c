@@ -1,7 +1,19 @@
-#include "print.h"
+#include "types.h"
+#include "io.h"
+#include "print_buffer.h"
+#include "math.h"
 
 void kernel_main() {
     print_clear();
-    print_set_color(PRINT_COLOR_YELLOW, PRINT_COLOR_BLACK);
-    print_str("Welcome to our 64-bit kernel!");
+
+    keyboard_t keyboard = keyboard_init();
+
+    while (1) {
+        // Keep the kernel running
+        process_key_states(&keyboard);
+
+        poll_keyboard_events(&keyboard);
+
+        print_clear();
+    }
 }

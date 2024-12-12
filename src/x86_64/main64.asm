@@ -1,4 +1,5 @@
 global long_mode_start
+extern multiboot_info
 extern kernel_main
 
 section .text

@@ -34,5 +34,14 @@ typedef int64_t i64;
 typedef __uint64_t size_t;
 typedef __uint64_t size_type;
 
+typedef u64 uintptr_t;
+typedef i64 intptr_t;
+
+#ifdef __INTELLISENSE__
+
+// This code will only be seen by VSCode's IntelliSense.
+typedef int bool;
+
+#endif
 
 #endif // INTTYPES_H
