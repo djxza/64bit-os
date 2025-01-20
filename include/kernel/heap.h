@@ -19,7 +19,7 @@ typedef struct block_meta {
 } block_meta_t;
 
 // Initialize the heap (called once)
-void heap_init(u32 size);
+void init_heap(u32 size);
 
 // Find a suitable block using the first-fit strategy
 block_meta_t* find_free_block(size_t size);

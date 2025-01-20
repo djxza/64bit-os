@@ -1,3 +1,5 @@
+#ifndef _TESTING_VIDEO
+
 #include "print.h"
 
 static const size_t NUM_COLS = 80;
@@ -86,10 +88,12 @@ void print_err(const char *msg)
 {
     u8 old_color = color;
 
-    /* color for red */
+    // color for red 
     print_set_color(PRINT_COLOR_RED, PRINT_COLOR_BLACK);
     print_str("err: ");
     color = old_color;
     print_str(msg);
     print_char('\n');
 }
+
+#endif

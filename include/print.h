@@ -2,6 +2,8 @@
 #define __PRINT_h__
 #define __INCLUDED_PRINT_h__ defined(__PRINT_h__)
 
+//#define _TESTING_VIDEO
+
 #include "types.h"
 
 enum {

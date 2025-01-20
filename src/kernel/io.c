@@ -13,7 +13,7 @@ static const char scancode_to_text[128] = {
 };
 
 
-keyboard_t keyboard_init() {
+keyboard_t init_keyboard() {
     return (keyboard_t) {
         .key_states = {0}
     };

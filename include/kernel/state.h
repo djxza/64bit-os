@@ -7,4 +7,6 @@ typedef struct {
     keyboard_t keyboard;
 } state_t;
 
+state_t init_state();
+
 #endif /* __STATE_h__ */

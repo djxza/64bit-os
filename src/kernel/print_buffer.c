@@ -1,5 +1,7 @@
 #include "print_buffer.h"
 
+#ifndef _TESTING_VIDEO
+
 // Global variables
 char* print_buffer = NULL;
 u32 size = 0;
@@ -39,3 +41,5 @@ void print_buffer_add(char *str)
 void print_buffer_clear() {
     print_clear();
 }
+
+#endif

@@ -10,7 +10,7 @@ static bool init = 0;
 // Points to the first free block
 static block_meta_t* free_list = NULL; 
 
-void heap_init(u32 size) {
+void init_heap(u32 size) {
     heap = (block_meta_t*) alloca(size);
     
     free_list = (block_meta_t*)heap;

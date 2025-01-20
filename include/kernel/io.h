@@ -13,7 +13,7 @@ typedef struct {
     bool key_states[MAX_KEYS]; // 1 if key is pressed, 0 if released
 } keyboard_t;
 
-keyboard_t keyboard_init();
+keyboard_t init_keyboard();
 
 // Port I/O functions
 u8 inb(uint16_t port);
