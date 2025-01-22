@@ -19,6 +19,7 @@
         "time.h": "c",
         "display.h": "c",
         "multiboot.h": "c",
-        "state.h": "c"
+        "state.h": "c",
+        "compare": "c"
     }
 }

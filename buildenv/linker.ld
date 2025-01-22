@@ -1,22 +1,22 @@
 ENTRY(start)
 
 SECTIONS {
-    . = 0x10000;                /* Kernel load address (64 KiB) */
+    . = 1M;  /* Kernel load address */
 
-    .multiboot_header : AT(0x1000) { /* Ensure the Multiboot header is at the correct location */
+    .boot ALIGN(8) : {
         *(.multiboot_header)
     }
-    .text : {
-        *(.text*)
+
+    .text ALIGN(8) : {
+        *(.text)
     }
-    .rodata : {
-        *(.rodata*)
+
+    .rodata ALIGN(8) : {
+        *(.rodata)
     }
-    .data : {
-        *(.data*)
-    }
-    .bss : {
+
+    .bss ALIGN(8) : {
+        *(.bss)
         *(COMMON)
-        *(.bss*)
     }
 }
